@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+   <style>
+       .navbar-custom{
+        background-color: rgba(30, 30, 30, 1.0);
+        border-radius: 10px;
+        text-align: center;
+        align-content: center;
+        margin: 1%;
+       }
+       .navbar-custom, .navbar-brand,
+       .navbar-custom, .nav-link{
+        color: white;
+       }
+       .navbar-custom, .navbar-link:hover{
+        color: gray;
+        margin-right: 50%;
+        padding-right: 97%;
+       }       
+       .icon{
+        object-position: left;
+       }
+       .map{
+        height: 580px;
+        margin-top:5px;
+        border: 1px solid black;
+        border-radius: 5px;
+       }
+       body{
+        text-align: center;
+        font-family: Josefin sans;
+        background-image: url(background.webp);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+       }
+       .list{
+        margin-top: 5px;
+        border: 1px solid black;
+        padding: 35px;
+        padding-top: 90px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+        border-radius: 10px;
+        background-color: rgba(12, 87, 128, 0.7);
+       }
+       .answer{
+        border: 1px solid black;
+        margin-top: 10px;
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 20%;
+        font-size: 40px;
+        border-radius: 10px;
+        background-color: #474747;
+        color: white;
+       }
+       h5{
+        border: 1px solid black;
+        border-radius: 5px;
+        color: white;
+        background-color: black;
+        padding: 5px;
+       }
+       .footer{
+        border: 1px solid white;
+        background-color: white;
+        width: 100%;
+        height: 30px;
+       }
+   </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a href="index.html" class="navbar-brand"><img src="favicon.ico" style="height: 40px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">HOME</a>  
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="Sched.html">TRANSIT&nbspSCHEDULE</a>  
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="Help.html">HELP</a>  
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-sm ">
+            <img src="MAPP.jpg" class="map">
+        </div>
+        <div class="col-sm list">
+              <div>
+                  <img src="favicon.ico" height="70px"><br><br>
+              </div>
+            <label for="locations1"><h5>Select First Station:</h5></label><br>
+            <select id="locations1" name="locations1">
+               <option value="1">North Avenue</option>
+               <option value="2">Quezon Avenue</option>
+               <option value="3">Kamuning</option>
+               <option value="4">Araneta Center-Cubao</option>
+               <option value="5">Santolan-Annapolis</option>
+               <option value="6">Ortigas</option>
+               <option value="7">Shaw Boulevard</option>
+               <option value="8">Boni</option>
+               <option value="9">Guadalupe</option>
+               <option value="10">Buendia</option>
+               <option value="11">Ayala</option>
+               <option value="12">Magallanes</option>
+               <option value="13">Taft Avenue</option>
+            </select><br><br>
+            <label for="locations2" class="labels"><h5>Select Second Station:</h5></label><br>
+            <select id="locations2" name="locations2">
+                <option value="1">North Avenue</option>
+                <option value="2">Quezon Avenue</option>
+                <option value="3">Kamuning</option>
+                <option value="4">Araneta Center-Cubao</option>
+                <option value="5">Santolan-Annapolis</option>
+                <option value="6">Ortigas</option>
+                <option value="7">Shaw Boulevard</option>
+                <option value="8">Boni</option>
+                <option value="9">Guadalupe</option>
+                <option value="10">Buendia</option>
+                <option value="11">Ayala</option>
+                <option value="12">Magallanes</option>
+                <option value="13">Taft Avenue</option>
+            </select><br><br>
+        <div>
+            <button type="button" onclick="medumdum()">Price</button>
+            <button type="button" onclick="medumdumdum()">Discounted Price</button><br>
+         <div>
+           <p id="answer" class="answer"> Price will show here</p>
+         </div>
+       </div>
+     </div>
+     <footer class="footer">
+         <p>Mathew Miguel B. Capati || 9-Emerald || Samantha Angela A. Ferrer</p>
+         <p></p>
+     </footer>
+      
+   </div>
+</body>
+
+<script>
+    
+    function medumdum(){
+        var station1 = parseInt(document.getElementById('locations1').value);
+        var station2 = parseInt(document.getElementById('locations2').value);
+        var formula1 = Math.abs(station1 - station2);
+        var formula2 = formula1 * 5 + 20;
+        document.getElementById('answer').textContent = `Your Fare is Php ${formula2}`;
+    }
+    function medumdumdum(){
+        var station1 = parseInt(document.getElementById('locations1').value);
+        var station2 = parseInt(document.getElementById('locations2').value);
+        var formula1 = Math.abs(station1 - station2);
+        var formula2 = (formula1 * 5 + 20) * 0.8;
+        document.getElementById('answer').textContent = `Your Fare is Php ${formula2}`;
+    }
+
+</script>
+</html>

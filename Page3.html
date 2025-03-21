@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+   <style>
+       .navbar-custom{
+        background-color: rgba(30, 30, 30, 1.0);
+        border-radius: 10px;
+        margin: 1%;
+       }
+       .navbar-custom, .navbar-brand,
+       .navbar-custom, .nav-link{
+        color: white;
+       }
+       .navbar-custom, .navbar-link:hover{
+        color: gray;
+        margin-right: 50%;
+        padding-right: 97%;
+       }       
+       .icon{
+        object-position: left;
+       }
+       body{
+        text-align: center;
+        font-family: Josefin sans;
+        background-image: url(background.webp);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+       }
+       .list{
+        margin-top: 50px;
+       }
+       h2{
+        border: 2px solid rgba(30, 30, 30, 1.0);
+        border-radius: 10px;
+        width: 40%;
+        margin-right: 30%;
+        margin-left: 30%;
+        background-color: rgba(30, 30, 30, 1.0);
+        color: white;
+       }
+       .sched{
+        border: 2px solid black;
+        border-radius: 3%;
+       }
+       .footer{
+        border: 1px solid white;
+        background-color: white;
+        width: 100%;
+        height: 30px;
+        margin-top: 10px;
+        color: black;
+       }
+       .comment{
+        list-style: none;
+        margin: 10px;
+        text-align: center;
+       }
+       .Help{
+        margin: 0;
+        border: 1px solid black;
+        background-color: white;
+        width: 50%;
+        padding: 10px;
+        margin-left: 25%;
+        margin-right: 25%;
+        border-radius: 5px;
+        color: black;
+       }
+       .submit{
+        border: 1px solid black;
+        padding: 5px;
+        width: 15%;
+        border-radius: 10px;
+        background-color: yellow;
+       }
+   </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand"><img src="favicon.ico" style="height: 40px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">HOME</a>  
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="Sched.html">TRANSIT&nbspSCHEDULE</a>  
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="Help.html">HELP</a>  
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <h2>Leave a Comment</h2>
+        <div>
+            <ul class="comment" style="margin-right: 2%;">
+                <li>
+                    <textarea for="textarea" name="textarea" rows="8" cols="100" class="textarea" placeholder="Type Here"></textarea>
+                </li>
+                <li style=" margin-top: 5px;">
+                    <label for="name"><h4>Name:</h4></label><br>
+                    <input type="textarea" class="name" id="name" style="width: 50%;"></input>
+                </li>
+                <li style=" margin-top: 5px;">
+                    <label for="email"><h4>Email:</h4></label><br>
+                    <input type="email" class="email" id="email" style="width: 50%;"></input>
+                </li><br>
+                <button type="submit" id="submit" class="submit">Send Comment</button>
+            </ul>
+        </div>
+        <div >
+            <h2>Help</h2><br>
+            <div class="Help">
+            <p>For any assistance feel free to contact us:</p>
+            <p>Phone Number: 8929-5347 local 2303.</p>
+            <p>Facebook: DOTr MRT-3 https://www.facebook.com/dotrmrt3</p>
+            <p>Address: The main office for MRT3 is located at EDSA corner North Avenue.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+         <p>Mathew Miguel B. Capati || 9-Emerald || Samantha Angela A. Ferrer</p>
+         <p></p>
+     </footer>
+</body>
+</html>
